@@ -1,6 +1,14 @@
 
 body {
+    margin: 0;
+    padding: 0;
     background-color: grey;
+}
+
+.main-container {
+    position: relative;
+    margin: 0 auto;
+    width: 768px;
 }
 
 .k-g-activity-container {
@@ -11,7 +19,7 @@ body {
 }
 
 .sliders-container {
-    background-color: red;
+    background-color: whitesmoke;
     width: 600px;
     height: 400px;
     margin: 0 auto;
@@ -22,5 +30,20 @@ body {
 }
 
 .slide {
+    display: block;
     float: left;
+    width: 20px;
+    height: 400px;
+}
+
+.intro {
+    background-color: #F00;
+}
+
+.activity {
+    background-color: #0F0;
+}
+
+.outro {
+    background-color: #00F;
 }
