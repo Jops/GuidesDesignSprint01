@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Sliding Doors - Sliding Doors - Design prototype sprint 1</title>
+        <link rel="stylesheet" href="../../style/index.css"  type="text/css" />
+        <style>
+
+            body {
+                background-color: grey;
+            }
+
+            .k-g-activity-container {
+                position: absolute;
+                top: 100px;
+                left: 10px;
+            }
+
+        </style>
+        <script src="./assets/interactive_guide/require.js"></script>
+        <!--[if lt IE 9]>
+        <script>
+            document.createElement('header');
+            document.createElement('nav');
+            document.createElement('article');
+            document.createElement('article');
+            document.createElement('aside');
+            document.createElement('footer');
+            document.createElement('figure');
+            document.createElement('figcaption');
+            document.createElement('hgroup');
+        </script>
+        <![endif]-->
+    </head>
+    <body class="content">
+
+        <section class="main-container">
+            <img src="assets/single_step_guide/bitesize_homepage_page.png"/>
+            <div id="activity-container" class="k-g-activity-container">
+        </section>
+
+        <script>
+            requirejs.config({
+                baseUrl: './assets/interactive_guide',
+                paths: {
+                }
+            });
+
+            var g_interactiveMain;
+
+            var g_initActivity = function() {
+                g_interactiveMain.init(
+                    {
+                        baseUrl: "./assets/interactive_guide",
+                        container: document.getElementById("activity-container")
+                    }
+                );
+            }
+
+            requirejs([ './main' ], function(_main) {
+                g_interactiveMain = _main;
+
+                document.onclick = function(e) {
+                    g_initActivity();
+                }
+            });
+        </script>
+
+    </body>
+</html>

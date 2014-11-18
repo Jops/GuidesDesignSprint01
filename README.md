@@ -1,4 +1,6 @@
 GuidesDesignSprint01
 ====================
 
-first design sprint prototype
+First design sprint prototypes project.
+
+Prototypes linked and listed in a root index page.
