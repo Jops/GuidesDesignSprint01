@@ -1,0 +1,26 @@
+
+body {
+    background-color: grey;
+}
+
+.k-g-activity-container {
+}
+
+.inner-content {
+    padding-top: 150px;
+}
+
+.sliders-container {
+    background-color: red;
+    width: 600px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+.sliders {
+    list-style-type: none;
+}
+
+.slide {
+    float: left;
+}
