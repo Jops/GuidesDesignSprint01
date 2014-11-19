@@ -1,4 +1,9 @@
 
+@font-face {
+    font-family: curious;
+    src: url('../assets/fonts/CuriousSans-Bold.ttf');
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -57,6 +62,7 @@ body {
 }
 
 .slide .k-g-activity-container {
+    font-family: arial;
     position: absolute;
     top: 40px;
     left: 54px;
@@ -69,21 +75,20 @@ body {
     left: 5px;
 }
 
-p {
-    display: inline;
-}
-
-.title {
+.slide-title {
+    font-family: curious;
     position: absolute;
     top: -20px;
     left: 65px;
     font-size: 29px;
 }
 
-.desc {
+.slide-desc {
+    font-family: arial;
+    font-size: 15px;
     position: absolute;
     top: 379px;
-    left: 195px;
+    left: 190px;
 }
 
 .activity {
