@@ -4,6 +4,7 @@
         <meta charset="utf-8" />
         <title>Sliding Doors - Sliding Doors - Design prototype sprint 1</title>
         <link rel="stylesheet" href="./src/slider.css"  type="text/css" />
+        <script src="./src/lib/createjs-2013.12.12.min.js"></script>
         <script src="./assets/interactive_guide/require.js"></script>
         <!--[if lt IE 9]>
         <script>
@@ -22,16 +23,21 @@
     <body class="content">
 
         <section class="main-container">
-            <img src="assets/sliding_doors/background.png"/>
-            <div class="inner-content">
-                <div class="sliders-container">
-                    <ul class="sliders">
-                        <li class="slide intro">
+            <img class="background-image" src="assets/sliding_rats/20_background.jpg"/>
+            <div id="inner-content" class="inner-content">
+                <div id="sliders-container" class="sliders-container">
+                    <ul id="sliders" class="sliders">
+                        <li id="outro" class="slide outro" data-active="false">
+                            <img id="bar_2" class="bar" src="assets/sliding_rats/outro_slide_min.png">
+                            <img id="icon_2" class="icon" src="assets/sliding_rats/left_arrow.png">
+                            <img class="outro-bg" src="assets/sliding_rats/20_card3_cropped.png">
                         </li>
-                        <li class="slide activity">
+                        <li id="activity" class="slide activity" data-active="false">
+                            <img id="bar_1" class="bar" src="assets/sliding_rats/activity_slide_min.png">
+                            <img id="icon_1" class="icon" src="assets/sliding_rats/left_arrow.png">
+                            <p class="desc">Click on the labels to see how each feature makes the rat fit for city living</p>
+                            <p class="title">The perfect design</p>
                             <div id="activity-container" class="k-g-activity-container">
-                        </li>
-                        <li class="slide outro">
                         </li>
                     </ul>
                 </div>
@@ -57,12 +63,13 @@
                 );
             }
 
-            requirejs([ 'slider', './main' ], function(_main) {
+            requirejs([ 'slider', './main' ], function(_slider, _main) {
                 g_interactiveMain = _main;
 
-                // document.onclick = function(e) {
-                //     g_initActivity();
-                // }
+                _slider.init(   document.getElementById("activity"), document.getElementById("outro"),
+                                document.getElementById("bar_1"), document.getElementById("bar_2"),
+                                document.getElementById("icon_1"), document.getElementById("icon_2"),
+                                54, 682);
             });
         </script>
 
